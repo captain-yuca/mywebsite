@@ -3,4 +3,5 @@ venv
 staticfiles
 .env
 bower_components
+node_modules
 *.sqlite3

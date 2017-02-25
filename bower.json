@@ -1,5 +1,5 @@
 {
-  "name": "mbWebsite",
+  "name": "mbwebsite",
   "authors": [
     "captain-yuca <manuel.baez@upr.edu>"
   ],
@@ -13,5 +13,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#^2.2.9",
+    "jquery": "^3.1.1"
+  }
 }
