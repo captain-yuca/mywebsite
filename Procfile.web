@@ -1,2 +1,2 @@
-web: gunicorn mbWebsite.wsgi
+django: gunicorn mbWebsite.wsgi
 node: bower install
