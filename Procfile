@@ -1,1 +1,1 @@
-web: gunicorn mbWebsite.wsgi
+web: bin/runsvdir-dyno

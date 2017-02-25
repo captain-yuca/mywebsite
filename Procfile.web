@@ -1,0 +1,2 @@
+web: gunicorn mbWebsite.wsgi
+node: bower install

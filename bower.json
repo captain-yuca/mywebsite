@@ -1,0 +1,17 @@
+{
+  "name": "mbWebsite",
+  "authors": [
+    "captain-yuca <manuel.baez@upr.edu>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
