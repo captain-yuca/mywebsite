@@ -20,5 +20,5 @@ from myProfile import views
 urlpatterns = [
     url(r'^$', include('myProfile.urls'), name='index'),
     url(r'^admin/', admin.site.urls),
-    url(r'^about/', views.about, name="about"),
+    # url(r'^about/', views.about, name="about"),
 ]
