@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "futura-pt";
+    src: url('./fonts/futura-pt/FuturaPTLight.otf') format("truetype");
+}
+*{
+  font-family: "futura-pt";
+}
+body{
+
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(http://www.natureserve.org/sites/default/files/window_cave.jpg);
+  background-size:cover;
+}
+.content{
+  position: absolute;
+  width: 100%;
+  height: auto !important;
+  color: white;
+  bottom: 0;
+  padding: 40px 60px 60px 60px;
+}
+
+.content > .text-container{
+  width: 60%;
+  margin-bottom: 26px;
+}
+
+.content > .text-container > .name{
+  font-family: "futura-pt";
+  font-size: 2.5em;
+  line-height: 1em;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.content > .text-container > .sub-header{
+  font-family: "futura-pt";
+  font-size: 1.5em;
+  font-style: normal;
+  line-height: 1em;
+  letter-spacing: 0;
+  font-weight: 300;
+  margin-top: .2em;
+}
+.content > .text-container > .description{
+  color:rgba(255,255,255,.65);
+  font-size: 1.2em;
+}
+
+.content > .links{
+  display: inline;
+  float: none;
+  margin-top: 26px;
+  position: static;
+}
+.content > .links > .github-link{
+  font-size: 2em;
+  /*position: relative;*/
+  /*width: auto;*/
+
+}
+.content > .links > .github-link > .github.icon{
+
+}
+
+.content > .links >.site-links{
+  background-color: rgba(255, 0, 0, 0);
+  margin-left: 1em;
+  width: auto;
+  mar
+}
+.content > .links >.site-links > ul{
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  text-decoration: none;
+  display: inline-block;
+}
+.content > .links >.site-links > ul > li{
+  list-style: none;
+  padding-right: .6em;
+  padding-top: .8em;
+  padding-bottom: .8em;
+  text-align: left;
+  display: inline-block;
+
+}
+
+.content > .links >.site-links > ul > li > a{
+  color: white;
+}
+.content > .links >.site-links > ul > li > a:hover{
+  color:rgba(255,255,255,.65);
+}

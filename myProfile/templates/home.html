@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %} ManuelBG - Home {% endblock %}
+
+{% block custom_css %}
+<link href="{% static 'base.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<div class="content">
+  <div class="text-container">
+    <h1 class="name">Manuel A. Baez Gonzalez</h1>
+    <h2 class="sub-header">CS undergrad, geek</h2>
+    <p class="description">Manuel Baez is a Computer Engineering
+      undergrad @ The University of Puerto Rico - Mayaguez.</p>
+  </div>
+  <div class="links">
+    <span class="github-link">
+      <a href="https://github.com/captain-yuca"><i class="github icon"></i></a>
+      <a href="https://github.com/captain-yuca"><i class="linkedin icon"></i></a>
+    </span>
+
+    <span class="site-links">
+      <ul>
+        <!-- <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'about' %}">Projects</a></li> -->
+
+      </ul>
+    </span>
+  </div>
+</div>
+{% endblock %}

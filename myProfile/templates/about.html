@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block custom_css %}
+<link href="{% static 'about.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<div class="ui top large sidebar menu">
+  <div class="header item">
+    <a href="{% url 'index' %}">ManuelBG</a>
+  </div>
+  <div class="right menu">
+    <a class="item">
+      1
+    </a>
+    <a class="item">
+      2
+    </a>
+    <a class="item">
+      3
+    </a>
+  </div>
+  </div>
+  <div class="pusher">
+    <div class="parallax">
+    </div>
+    <div class="ui container grid">
+      <div class="four wide column">
+        <img class="disabled medium ui image" src="http://placehold.it/500x500" onclick="$('.sidebar')
+  .sidebar('setting', 'transition', 'overlay')
+  .sidebar('toggle')
+;">
+      </div>
+      <div class="twelve wide column">
+        Hello there! My name Manuel Baez. I'm a Computer Engineering Undergrad at
+        the University of Puerto Rico - Mayaguez Campus. Currently, i'm
+        the president of the IEEE Computer Society. 
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "futura-pt";
+    src: url('./fonts/futura-pt/FuturaPTBook.otf') format("truetype");
+}
+@font-face {
+    font-family: "metaserif-book";
+    src: url('./fonts/metaserif-book.otf') format("truetype");
+}
+*{
+  /*font-family: "futura-pt";*/
+}
+body, html {
+    height: 100%;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("http://www.natureserve.org/sites/default/files/window_cave.jpg");
+
+    /* Full height */
+    height: 45vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ui.container.grid{
+  padding-top: 5em;
+  font-family: "metaserif-book";
+  font-size: 1.5em;
+  line-height: 1.7em;
+  letter-spacing: 0px;
+  font-weight: 500;
+}
