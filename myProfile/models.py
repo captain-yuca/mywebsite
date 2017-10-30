@@ -13,5 +13,3 @@ class Project(models.Model):
             description=self.description,
             image_url=self.image_url,
             redirect_url=self.redirect_url)
-class Router(models.Model):
-    specifications = models.FileField(upload_to='router_specifications')
