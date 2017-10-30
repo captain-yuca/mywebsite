@@ -1,43 +1,48 @@
-{% extends 'base.html' %}
+{% extends 'main.html' %}
 {% load staticfiles %}
 
-{% block custom_css %}
+{% block main_custom_css %}
 <link href="{% static 'about.css' %}" rel="stylesheet" />
 {% endblock %}
 
-{% block content %}
-<div class="ui top large sidebar menu">
-  <div class="header item">
-    <a href="{% url 'index' %}">ManuelBG</a>
-  </div>
-  <div class="right menu">
-    <a class="item">
-      1
-    </a>
-    <a class="item">
-      2
-    </a>
-    <a class="item">
-      3
-    </a>
-  </div>
-  </div>
-  <div class="pusher">
+{% block main_content %}
+
     <div class="parallax">
-    </div>
-    <div class="ui container grid">
-      <div class="four wide column">
-        <img class="disabled medium ui image" src="http://placehold.it/500x500" onclick="$('.sidebar')
+          <div class="page-title">
+              <h1>About</h1>
+          </div>
+      </div>
+    <div class="ui centered aligned container grid">
+      <div class="sixteen wide mobile four wide computer column centered aligned">
+        <img class="medium circular ui image" src="{% static 'images/profile.jpg' %}" onclick="$('.sidebar')
   .sidebar('setting', 'transition', 'overlay')
   .sidebar('toggle')
 ;">
       </div>
-      <div class="twelve wide column">
-        Hello there! My name Manuel Baez. I'm a Computer Engineering Undergrad at
-        the University of Puerto Rico - Mayaguez Campus. Currently, i'm
-        the president of the IEEE Computer Society. 
+      <div class="sixteen wide mobile twelve wide computer column">
+        <br />
+        Saludos, I'm Manuel Baez! I'm a Computer Engineering Undergrad at
+        the University of Puerto Rico - Mayaguez Campus. I develop Java and Angular 2 applications.
+        I like strategy games, discovering good food, traveling, helping people get into coding and doing challenging work.
+      </div>
+      <div class="sixteen wide column">
+        <p>What I've been up to these days:</p>
+        <ul>
+          <li>
+            Working as a full stack developer with a college program called RumboEx which helps freshman students to adapt to the university lifestyle
+          </li>
+          <li>
+            Helping a research team by developing a website to display their efforts and creating tools to streamline certain processes
+          </li>
+          <li>
+            President of the IEEE Computer Society - UPRM Chapter
+          </li>
+          <li>
+            Taking Software Engineering, Databases and Programming Languages coursework
+          </li>
+        </ul>
+
       </div>
     </div>
-  </div>
 
 {% endblock %}

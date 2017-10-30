@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block main_custom_css %}
+<link href="{% static 'projects.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block main_content %}
+
+    <div class="parallax">
+        <div class="page-title">
+            <h1>Projects</h1>
+        </div>
+    </div>
+    <div class="ui centered aligned container grid">
+      {% if projects_array %}
+          {% for project in projects_array %}
+        <div class="sixteen wide mobile column centered aligned">
+                     <img class="ui medium image" src={{project.image_url}}/>
+                     <h2>{{project.title}}</h2>
+                     <p>{{project.description}}</p>
+                     {% if project.redirect_url%}
+                      <a href="{{project.redirect_url}}">{{project.redirect_url}}</a>
+                     {% endif %}
+                     <div class="ui divider"></div>
+
+        </div>
+        {% endfor %}
+    {% endif %}
+
+    </div>
+
+
+{% endblock %}
+{% block main_extra_scripts %}
+<script src="{% static 'project.js' %}"></script>
+<script type="text/javascript">
+   PROJECT_UTILS.init("{{projects_array_json}}");
+</script>
+{% endblock %}

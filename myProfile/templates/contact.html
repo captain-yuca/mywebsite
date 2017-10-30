@@ -1,0 +1,49 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block main_custom_css %}
+<link href="{% static 'contact.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block main_content %}
+
+    <div class="parallax">
+        <div class="page-title">
+            <h1>Contact</h1>
+        </div>
+    </div>
+    <div class="ui container grid">
+      <div class="sixteen wide mobile eight wide computer column">
+          <h1>Alternatives to Smoke Signals</h1>
+         <p>
+            Please feel free to reach out to me if you have any questions or comments about the services I offer. Also, you could always just send me a friendly hello.
+         </p>
+      </div>
+      <div class="sixteen wide mobile eight wide computer column">
+         <form class="ui form" action="{% url 'contact' %}" method="post">
+             {% csrf_token %}
+            <div class="field">
+               <label>Name</label>
+               <input type="text" name="name" placeholder="Name" />
+            </div>
+            <div class="field">
+               <label>Email</label>
+               <input type="email" name="email" placeholder="Email" />
+            </div>
+            <div class="field">
+               <label>Subject</label>
+               <input type="text" name="subject" placeholder="Subject" />
+            </div>
+            <div class="field">
+               <label>Message Body</label>
+               <textarea name="message" placeholder="Message Body" ></textarea>
+            </div>
+            <input class="ui submit button" type="submit" value="Submit"/>
+         </form>
+      </div>
+
+
+    </div>
+
+
+{% endblock %}

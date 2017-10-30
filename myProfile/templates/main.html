@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block custom_css %}
+  <link href="{% static 'main.css' %}" rel="stylesheet" />
+  {% block main_custom_css %}
+  {% endblock %}
+{% endblock %}
+
+{% block content %}
+  <header class="cd-header">
+  			<div id="cd-logo"><a href="{% url 'index' %}">MANUELBG</a></div>
+  			<a class="cd-menu-trigger" href="#main-nav">Menu<span></span></a>
+  </header>
+  {% block main_content%}
+  {% endblock %}
+  <nav id="main-nav" class="">
+    	<ul>
+    		<li><a href="{% url 'index' %}"><span>Home</span></a></li>
+    		<li><a href="{% url 'projects' %}"><span>Projects</span></a></li>
+    		<li><a href="{% url 'about' %}"><span>About</span></a></li>
+        <li><a href="{% url 'contact' %}"><span>Contact</span></a></li>
+    	</ul>
+    	<a href="#0" class="cd-close-menu">Close<span></span></a>
+    </nav>
+{% endblock %}
+
+{% block extra_scripts %}
+  <script src="{% static 'menu.js' %}"></script>
+
+
+  {% block main_extra_scripts %}
+  {% endblock %}
+
+
+{% endblock %}

@@ -1,0 +1,12 @@
+.ui.medium.image{
+  display: inline-block;
+}
+.ui.card.centered.aligned:hover{
+  box-shadow: 0 2px 3px 0 rgb(63, 120, 217), 0 0 0 2px rgb(63, 120, 217);
+  background: rgb(239, 242, 245);
+}
+.ui.card>.content{
+  /*width:auto;*/
+  height:200px;
+  padding-bottom: 30px;
+}

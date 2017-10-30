@@ -139,3 +139,12 @@ BOWER_INSTALLED_APPS = (
     'jquery',
     'semantic-ui'
 )
+
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER = 'manuelabaezg'
+EMAIL_HOST_PASSWORD = 'Guitars123&Picks456'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

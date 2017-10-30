@@ -29,8 +29,11 @@ body, html {
 .ui.container.grid{
   padding-top: 5em;
   font-family: "metaserif-book";
-  font-size: 1.5em;
+  font-size: 1.4em;
   line-height: 1.7em;
   letter-spacing: 0px;
   font-weight: 500;
+}
+.ui.medium.image{
+  display: inline-block;
 }
