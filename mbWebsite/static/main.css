@@ -205,12 +205,12 @@ Main components
   overflow-y: auto;
 }
 
-#cd-intro {
+/*#cd-intro {
   position: relative;
   height: 100%;
   background: url("../img/bg-img.jpg") no-repeat center center;
   background-size: cover;
-}
+}*/
 #cd-intro h1 {
   position: absolute;
   width: 90%;
@@ -258,18 +258,7 @@ Main components
   }
 }
 
-.cd-blurred-bg {
-  /* we use jQuery to apply a mask to this element - CSS clip property */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../img/bg-img.jpg") no-repeat center center;
-  background-size: cover;
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
-}
+
 .no-js .cd-blurred-bg {
   display: none;
 }
