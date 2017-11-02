@@ -205,12 +205,6 @@ Main components
   overflow-y: auto;
 }
 
-/*#cd-intro {
-  position: relative;
-  height: 100%;
-  background: url("../img/bg-img.jpg") no-repeat center center;
-  background-size: cover;
-}*/
 #cd-intro h1 {
   position: absolute;
   width: 90%;
