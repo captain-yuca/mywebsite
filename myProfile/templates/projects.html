@@ -16,7 +16,7 @@
       {% if projects_array %}
           {% for project in projects_array %}
         <div class="sixteen wide mobile column centered aligned">
-                     <img class="ui medium image" src={{project.image_url}}/>
+                     <img class="ui medium image" src={{project.image.url}}/>
                      <h2>{{project.title}}</h2>
                      <p>{{project.description}}</p>
                      {% if project.redirect_url%}

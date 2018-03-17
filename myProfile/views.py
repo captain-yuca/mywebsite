@@ -10,13 +10,19 @@ from django.core.mail import EmailMessage
 from .forms import ContactForm
 import logging
 
-from .models import Project
+from .models import Project, AboutUpToInfo, AboutInfo
 from .forms import ContactForm
 
 
 
 def about(request):
-    return render(request, 'about.html')
+    page_info = AboutInfo.objects.first()
+    up_to_info = AboutUpToInfo.objects.all()
+    context = {
+        'page_info': page_info,
+        'up_to_info': up_to_info
+    }
+    return render(request, 'about.html', context)
 
 def projects(request):
     projects_array = Project.objects.all()

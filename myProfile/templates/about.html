@@ -14,32 +14,31 @@
       </div>
     <div class="ui centered aligned container grid">
       <div class="sixteen wide mobile four wide computer column centered aligned">
-        <img class="medium circular ui image" src="{% static 'images/profile.jpg' %}" onclick="$('.sidebar')
+        {% if page_info %}
+
+        <img class="medium circular ui image" src="{{page_info.image.url}}" onclick="$('.sidebar')
   .sidebar('setting', 'transition', 'overlay')
   .sidebar('toggle')
 ;">
+{% endif %}
+
       </div>
       <div class="sixteen wide mobile twelve wide computer column">
         <br />
-        Saludos, I'm Manuel Baez! I'm a Computer Engineering Undergrad at
-        the University of Puerto Rico - Mayaguez Campus. I develop Java and Angular 2 applications.
-        I like strategy games, discovering good food, traveling, helping people get into coding and doing challenging work.
+        {% if page_info %}
+        {{page_info.description}}
+        {% endif %}
       </div>
       <div class="sixteen wide column">
         <p>What I've been up to these days:</p>
         <ul>
-          <li>
-            Working as a full stack developer with a college program called RumboEx which helps freshman students to adapt to the university lifestyle
-          </li>
-          <li>
-            Helping a research team by developing a website to display their efforts and creating tools to streamline certain processes
-          </li>
-          <li>
-            President of the IEEE Computer Society - UPRM Chapter
-          </li>
-          <li>
-            Taking Software Engineering, Databases and Programming Languages coursework
-          </li>
+          {% if up_to_info %}
+                {% for info in up_to_info %}
+                <li>
+                  {{info.description}}
+                </li>
+                {% endfor %}
+          {% endif %}
         </ul>
 
       </div>
