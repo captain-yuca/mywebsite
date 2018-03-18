@@ -14,8 +14,10 @@ itsdangerous==0.24
 Jinja2==2.8.1
 MarkupSafe==0.23
 mock==2.0.0
+olefile==0.44
 packaging==16.8
 pbr==1.10.0
+Pillow==4.3.0
 psycopg2==2.6.2
 pyparsing==2.2.0
 python-engineio==1.1.0
