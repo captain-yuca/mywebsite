@@ -23,7 +23,7 @@ server {
 {{ else }}
   ############## NEXT PART ADDED FOR django-project-template #####################################
   location /media {
-    root /var/lib/dokku/data/storage/{{ $.APP }}/media;
+    root /var/lib/dokku/data/storage/{{ $.APP }};
   }
   ############## END OF PART ADDED FOR django-project-template ###################################
   location    / {
@@ -85,7 +85,7 @@ server {
 
   ############## NEXT PART ADDED FOR django-project-template #####################################
   location /media {
-    root /var/lib/dokku/data/storage/{{ $.APP }}/media;
+    root /var/lib/dokku/data/storage/{{ $.APP }};
   }
   ############## END OF PART ADDED FOR django-project-template ###################################
 
