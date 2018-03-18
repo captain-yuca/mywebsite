@@ -8,6 +8,9 @@
     },
     "main": "index",
     "scripts": {
-        "postinstall": "bower install"
+        "postinstall": "bower install",
+        "dokku": {
+        "postdeploy": "./manage.py migrate"
+        }
     }
 }
