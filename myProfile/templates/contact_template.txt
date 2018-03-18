@@ -5,4 +5,4 @@ Email:
 {{ contact_email }}
 
 Content:
-{{ form_content|safe|striptags }}
+{{ contact_message|safe|striptags }}

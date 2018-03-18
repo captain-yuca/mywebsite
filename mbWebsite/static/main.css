@@ -11,6 +11,7 @@
 }
 body, html {
     height: 100%;
+    width: 100%;
 }
 
 .parallax {
@@ -26,13 +27,13 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 
-}
-@media only screen and (max-width: 768px){
-  .parallax{
     padding: 20px !important;
     max-width: 100% !important;
     box-sizing: border-box;
-  }
+
+}
+@media only screen and (max-width: 768px){
+
 }
 
 
@@ -41,25 +42,20 @@ body, html {
   padding: 1em 1.5em;
   top:10em;
   position: relative;
-  width:auto;
-  margin-left: 45px;
+  width:100%;
+  margin: 0;
   display: inline-block;
 }
+
 .page-title > h1{
   font-family: "futura-pt";
   text-transform: uppercase;
   letter-spacing: .5em;
   font-weight: 400;
-  font-size: 4em;
+  text-align: center;
+  font-size: 2.4em;
 }
-@media only screen and (max-width: 768px){
-  .page-title{
 
-    margin: 0;
-    width: 100%;
-
-  }
-}
 .ui.container.grid{
   padding-top: 5em;
   padding-bottom: 5em;
@@ -268,7 +264,7 @@ Main components
   display: block;
 }
 #cd-logo a {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-style: 'futura-pt';
   font-weight: 500;
   line-height: 1em;
@@ -279,10 +275,15 @@ Main components
     left: 20px;
     top: 27px;
   }
+  #cd-logo a {
+    font-size: 1.5em;
+
+}
 }
 @media only screen and (min-width: 1170px) {
   #cd-logo {
     left: 60px;
+
   }
 }
 
@@ -512,4 +513,26 @@ Main components
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
   transition-delay: 0s;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-title{
+
+    width:auto;
+    margin:auto;
+    margin-left: 45px;
+
+  }
+
+  .page-title > h1{
+    font-size: 3em;
+
+  }
+
+  .parallax{
+    padding: auto !important;
+    max-width: auto !important;
+    box-sizing: auto;
+  }
+
 }

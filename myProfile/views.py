@@ -10,7 +10,7 @@ from django.core.mail import EmailMessage
 from .forms import ContactForm
 import logging
 
-from .models import Project, AboutUpToInfo, AboutInfo
+from .models import Project, AboutUpToInfo, AboutInfo, HomeInfo
 from .forms import ContactForm
 
 
@@ -34,7 +34,11 @@ def projects(request):
     return render(request, 'projects.html', context)
 
 def index(request):
-    return render(request, 'home.html')
+    page_info = HomeInfo.objects.first()
+    context={
+        'page_info': page_info
+    }
+    return render(request, 'home.html', context)
 
 def contact(request):
     logger = logging.getLogger(__name__)
@@ -52,6 +56,7 @@ def contact(request):
                 'email'
             , '')
             contact_message = request.POST.get('message', '')
+            contact_subject = request.POST.get('subject', '')
 
             # Email the profile with the
             # contact information
@@ -64,8 +69,8 @@ def contact(request):
             content = template.render(context)
 
             email = EmailMessage(
-                "New contact form submission",
-                contact_message,
+                "ManuelBG: " + str(contact_subject),
+                content,
                 "ManuelBG" +'',
                 ['manuelabaezg@gmail.com'],
                 headers = {'Reply-To': contact_email }

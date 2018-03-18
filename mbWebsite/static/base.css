@@ -10,17 +10,21 @@ body{
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(http://www.natureserve.org/sites/default/files/window_cave.jpg);
   background-size:cover;
 }
+
+/*CONTENT  */
 .content{
   position: absolute;
   width: 100%;
   height: auto !important;
   color: white;
   bottom: 0;
-  padding: 40px 60px 60px 60px;
+  padding: 0 1.8em 1.8em 1.8em;
+  display: flex;
+  flex-direction: column;
 }
 
 .content > .text-container{
-  width: 60%;
+  width: 100%;
   margin-bottom: 26px;
 }
 
@@ -58,15 +62,15 @@ body{
   /*width: auto;*/
 
 }
-.content > .links > .github-link > .github.icon{
+/* .content > .links > .github-link > .github.icon{
 
-}
+} */
 
 .content > .links >.site-links{
   background-color: rgba(255, 0, 0, 0);
   margin-left: 1em;
   width: auto;
-  mar
+
 }
 .content > .links >.site-links > ul{
   letter-spacing: 1px;
@@ -77,7 +81,8 @@ body{
   padding: 0;
   line-height: 1em;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
 }
 .content > .links >.site-links > ul > li{
   list-style: none;
@@ -94,4 +99,24 @@ body{
 }
 .content > .links >.site-links > ul > li > a:hover{
   color:rgba(255,255,255,.65);
+}
+
+@media only screen and (min-width: 768px) {
+  .content{
+    position: absolute;
+    width: 100%;
+    height: auto !important;
+    color: white;
+    bottom: 0;
+    padding: 0 3em 3em 3em;
+  }
+
+  .content > .text-container{
+    width: 60%;
+  }
+
+
+  .content > .links >.site-links > ul{
+    display: inline-block;
+
 }

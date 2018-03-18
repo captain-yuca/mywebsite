@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from .validators import validate_file_extension
 
 class Project(models.Model):
     title= models.CharField(max_length=200)
@@ -33,4 +34,16 @@ class AboutUpToInfo(models.Model):
         def as_json(self):
             return dict(
                 description=self.description
+                )
+
+class HomeInfo(models.Model):
+        header = models.CharField(max_length=50)
+        subheader = models.CharField(max_length=200)
+        cv = models.FileField(upload_to='cv/', validators=[validate_file_extension])
+
+        def as_json(self):
+            return dict(
+                header = self.header,
+                subheader = self.subheader,
+                cv = self.cv
                 )
