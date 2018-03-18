@@ -134,6 +134,10 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+if os.environ.get("DATABASE_URL"):
+    MEDIA_ROOT = '/var/lib/dokku/data/storage/djangowebsite/media/'
+
 MEDIA_URL = "/media/"
 
 # Simplified static file serving.

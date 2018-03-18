@@ -23,6 +23,7 @@ server {
 {{ else }}
   ############## NEXT PART ADDED FOR django-project-template #####################################
   location /media {
+    autoindex on;
     root /var/lib/dokku/data/storage/{{ $.APP }};
   }
   ############## END OF PART ADDED FOR django-project-template ###################################
