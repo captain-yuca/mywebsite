@@ -26,8 +26,8 @@ class HomeAdmin(admin.ModelAdmin):
 admin.site.register(HomeInfo, HomeAdmin)
 
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ('id','title', 'slug', 'body')
-    exclude = ['posted']
+    list_display = ('id','title', 'slug', 'body', 'posted')
+    # exclude = ['posted']
     prepopulated_fields = {'slug': ('title',)}
 
 class CategoryAdmin(admin.ModelAdmin):

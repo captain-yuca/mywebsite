@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils import timezone
 from django.db.models import permalink
+from datetime import date
+
 
 from .validators import validate_file_extension
 
@@ -66,7 +68,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     body = models.TextField()
-    posted = models.DateField(db_index=True, auto_now_add=True)
+    posted = models.DateField(db_index=True, default=date.today)
     image = models.ImageField(upload_to = "blog/", default="blog/empty_post.jpg")
     category = models.ForeignKey('myProfile.Category')
 
