@@ -68,7 +68,6 @@
 @font-face {
     font-family: 'proxima_nova_ltthin';
     src: url('./fonts/Mark Simonson - Proxima Nova Thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/Mark Simonson - Proxima Nova Thin-webfont.woff2') format('woff2'),
          url('./fonts/Mark Simonson - Proxima Nova Thin-webfont.woff') format('woff'),
          url('./fonts/Mark Simonson - Proxima Nova Thin-webfont.ttf') format('truetype'),
          url('./fonts/Mark Simonson - Proxima Nova Thin-webfont.svg#proxima_nova_ltthin') format('svg');
