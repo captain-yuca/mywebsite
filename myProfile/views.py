@@ -1,5 +1,5 @@
 from django.core import serializers
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response, get_object_or_404
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
@@ -7,10 +7,11 @@ from django.template import Context
 from django.template.loader import get_template
 from django.core.mail import EmailMessage
 
+
 from .forms import ContactForm
 import logging
 
-from .models import Project, AboutUpToInfo, AboutInfo, HomeInfo
+from .models import Project, AboutUpToInfo, AboutInfo, HomeInfo, Blog, Category
 from .forms import ContactForm
 
 
@@ -32,6 +33,24 @@ def projects(request):
         'projects_array_json': projects_array_json
     }
     return render(request, 'projects.html', context)
+
+def blog(request):
+    return render_to_response('blog.html', {
+        'categories': Category.objects.all(),
+        'posts': Blog.objects.all()[:5]
+    })
+
+def view_post(request, slug):
+    return render_to_response('view_post.html', {
+        'post': get_object_or_404(Blog, slug=slug)
+    })
+
+def view_category(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    return render_to_response('view_category.html', {
+        'category': category,
+        'posts': Blog.objects.filter(category=category)[:5]
+    })
 
 def index(request):
     page_info = HomeInfo.objects.first()

@@ -3,7 +3,7 @@ from django.contrib import admin
 from myProfile import models
 
 # Register your models here.
-from .models import Project, AboutInfo, AboutUpToInfo, HomeInfo
+from .models import Project, AboutInfo, AboutUpToInfo, HomeInfo, Blog, Category
 
 class ProjectAdmin(admin.ModelAdmin):
     list_display=('id','title', 'description', 'image', 'redirect_url')
@@ -24,3 +24,13 @@ class HomeAdmin(admin.ModelAdmin):
     list_display = ('header', 'subheader', 'cv')
 
 admin.site.register(HomeInfo, HomeAdmin)
+
+class BlogAdmin(admin.ModelAdmin):
+    exclude = ['posted']
+    prepopulated_fields = {'slug': ('title',)}
+
+class CategoryAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('title',)}
+
+admin.site.register(Blog, BlogAdmin)
+admin.site.register(Category, CategoryAdmin)

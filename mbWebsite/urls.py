@@ -24,6 +24,10 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^about/', views.about, name="about"),
     url(r'^projects/', views.projects, name="projects"),
-    url(r'^contact/', views.contact, name="contact")
+    url(r'^contact/', views.contact, name="contact"),
+    url(r'^blog/view/(?P<slug>[^\.]+).html', views.view_post, name='view_blog_post'),
+    url(r'^blog/category/(?P<slug>[^\.]+).html',views.view_category, name='view_blog_category'),
+    url(r'^blog/', views.blog, name="blog"),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block main_custom_css %}
+<link href="{% static 'blog.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block main_content %}
+
+    <div class="parallax">
+        <div class="page-title">
+            <h1>{{category.title}}</h1>
+        </div>
+    </div>
+    <div class="ui centered aligned container grid">
+      {% if posts %}
+        <ul>
+        {% for post in posts %}
+            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no posts.</p>
+    {% endif %}
+    </div>
+
+
+{% endblock %}
+{% block main_extra_scripts %}
+{% endblock %}

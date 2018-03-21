@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+
+{% block main_custom_css %}
+<link href="{% static 'blog.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block main_content %}
+
+    <div class="parallax">
+        <div class="page-title">
+            <h1>Blog</h1>
+        </div>
+    </div>
+    <div class="ui container">
+      <h2>Categories</h2>
+
+    {% if categories %}
+        <ul>
+        {% for category in categories %}
+            <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no posts.</p>
+    {% endif %}
+
+    <h2>Posts</h2>
+    {% if posts %}
+        <ul>
+        {% for post in posts %}
+            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no posts.</p>
+    {% endif %}
+  </div>
+
+
+{% endblock %}
+{% block main_extra_scripts %}
+{% endblock %}
