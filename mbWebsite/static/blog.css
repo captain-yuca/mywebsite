@@ -1,9 +1,38 @@
+@font-face {
+    font-family: "metaserif-book";
+    src: url('./fonts/metaserif-book.otf') format("truetype");
+}
+
+
 .extra > a{
   color: rgba(0,0,0,.6);
   font-size: 1em;
 }
-
-.ui.container.grid{
-
-font-family: "metaserif-book" !important;
+/* OVERRIDES */
+.post.item > .content > .header{
+  font-family: "Proxima Nova" !important;
+  /* letter-spacing: 1px; */
 }
+.post.item > .content > .description >p{
+  font-family: "metaserif-pro-medi" !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.05em;
+  letter-spacing: 0px;
+  line-height: 1.4em;
+}
+.post.item > .content > .meta{
+  font-family: "metaserif-pro-book" !important;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.post.item > .content > .extra > a{
+  font-family: "Proxima Nova" !important;
+}
+
+.category.item{
+  font-family: "Proxima Nova" !important;
+}
+
+/* POST */
