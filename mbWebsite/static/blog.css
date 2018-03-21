@@ -35,4 +35,41 @@
   font-family: "Proxima Nova" !important;
 }
 
+
+
+
 /* POST */
+.post.title{
+  font-family: "Proxima Nova" !important;
+  font-size: 3em;
+  text-align: center;
+  letter-spacing: 0px;
+}
+
+.post.body > p{
+  font-family: "Georgia" !important;
+  font-style: normal;
+    font-weight: 500;
+    font-size: 1.5em;
+    letter-spacing: 0px;
+    line-height: 1.9em;
+}
+.post.container{
+  padding: 1.5em 3em 5em 3em;
+
+}
+
+.post.image{
+  margin: 1.5em .5em 3em .5em;
+}
+
+.post.meta{
+  font-family: "Proxima Nova" !important;
+  text-align: left;
+}
+@media only screen and (max-width: 768px) {
+  .post.container{
+    padding: 1.5em 1em 3em 1em;
+
+  }
+}
