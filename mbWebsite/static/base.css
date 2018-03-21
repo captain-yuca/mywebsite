@@ -2,8 +2,12 @@
     font-family: "futura-pt";
     src: url('./fonts/futura-pt/FuturaPTLight.otf') format("truetype");
 }
+@font-face {
+    font-family: "metaserif-book";
+    src: url('./fonts/metaserif-book.otf') format("truetype");
+}
 *{
-  font-family: "futura-pt";
+  font-family: "metaserif-book";
 }
 body{
 
