@@ -10,6 +10,9 @@
 {{ $scheme := index $port_map_list 0 }}
 {{ $listen_port := index $port_map_list 1 }}
 {{ $upstream_port := index $port_map_list 2 }}
+client_max_body_size 20M;
+
+
 
 {{ if eq $scheme "http" }}
 server {
